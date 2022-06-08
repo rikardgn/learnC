@@ -1,6 +1,6 @@
-/*This program displays all files in current directory
-* and adds the files to a list from which copying is to be made
-*
+/*This program copiees a random list of files randomly selected from a larger list of files.
+*Persoanlly I use this program to create smaller libraries of randomly selected mp3 files to copy.
+*I then copy the random selection to my smartphone.
 */
 #include <dirent.h>
 #include <stdio.h>
