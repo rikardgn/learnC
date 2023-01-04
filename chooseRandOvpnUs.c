@@ -1,7 +1,9 @@
 //Program to randomly choose beetween the different us ovpn sites
 //You can suscribe to the vpn service ovpn by logging onto www.ovpn.com
+//This program can also easily be modfied to use other vpn services that uses the openvpn protocol,
+//just changes the names and paths of the .config files :)
 //Rikard Grossman-Nielsen
-//14th dec 2022
+//4th jan 2022
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -11,13 +13,14 @@ int main(void){
     float randomNum, randomNumIntPart, randomNumFracPart;
     char *chrPtr;
     //Input the different ovpn sites in char arrays
-    char cArrUsOvpn1[]="sudo openvpn ./us.atlanta.ovpn.com.ovpn";
-    char cArrUsOvpn2[]="sudo openvpn ./us.chicago.ovpn.com.ovpn";
-    char cArrUsOvpn3[]="sudo openvpn ./us.dallas.ovpn.com.ovpn";
-    char cArrUsOvpn4[]="sudo openvpn ./us.denver.ovpn.com.ovpn";
-    char cArrUsOvpn5[]="sudo openvpn ./us.los-angeles.ovpn.com.ovpn";
-    char cArrUsOvpn6[]="sudo openvpn ./us.new-york.ovpn.com.ovpn";
-    char cArrUsOvpn7[]="sudo openvpn ./us.seattle.ovpn.com.ovpn";
+    //sudo openvpn --auth-nocache --config ./myfile.ovpn
+    char cArrUsOvpn1[]="sudo openvpn --auth-nocache --config ./us.atlanta.ovpn.com.ovpn";
+    char cArrUsOvpn2[]="sudo openvpn --auth-nocache --config ./us.chicago.ovpn.com.ovpn";
+    char cArrUsOvpn3[]="sudo openvpn --auth-nocache --config ./us.dallas.ovpn.com.ovpn";
+    char cArrUsOvpn4[]="sudo openvpn --auth-nocache --config ./us.denver.ovpn.com.ovpn";
+    char cArrUsOvpn5[]="sudo openvpn --auth-nocache --config ./us.los-angeles.ovpn.com.ovpn";
+    char cArrUsOvpn6[]="sudo openvpn --auth-nocache --config ./us.new-york.ovpn.com.ovpn";
+    char cArrUsOvpn7[]="sudo openvpn --auth-nocache --config ./us.seattle.ovpn.com.ovpn";
 
     //generate random number
     srand(time(0));
